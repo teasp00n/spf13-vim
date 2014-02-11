@@ -1,0 +1,54 @@
+set shell=/usr/bin/sh
+
+set guifont=Andale\ Mono\ Bold\ 12,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+set noantialias " should stop all the weird visual artifacts etc
+
+set nocursorline
+set nolist
+set ttyscroll=0
+set t_Co=256
+map <F1> <nop>
+nmap <F1> <nop>
+imap <F1> <nop>
+nmap <leader>rc :source $MYVIMRC <cr>
+
+set completeopt-=preview
+
+"let g:override_spf13_bundles = 1
+let g:syntastic_python_checkers=['flake8']
+"let g:neocomplcache_max_list=0
+let g:indent_guides_enable_on_vim_startup = 0
+let g:syntastic_always_populate_loc_list=1
+"let g:ycm_server_use_vim_stdout = 1
+"let g:ycm_server_log_level = 'debug'
+let g:ycm_path_to_python_interpreter = '/usr/bin/python2'
+
+autocmd BufNewFile,BufRead *.nxc set filetype=nxc
+autocmd FileType nxc setlocal syntax=nxc
+"let g:syntastic_disabled_filetypes=[ 'c','cpp','m', 'mm' ]
+
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['c', 'cpp', 'm', 'mm'] }
+
+let b:javagetset_getterTemplate =
+            \ "\n" .
+            \ "/**\n" .
+            \ " * Get %varname%.\n" .
+            \ " * @return %varname% as %type%.\n" .
+            \ " */\n" .
+            \ "%modifiers% %type% %funcname%() {\n" .
+            \ "\treturn %varname%;\n" .
+            \ "}"
+
+let b:javagetset_setterTemplate =
+            \ "\n" .
+            \ "/**\n" .
+            \ " * Set %varname%.\n" .
+            \ " * @param %varname% the value to set %varname%.\n" .
+            \ " */\n" .
+            \ "%modifiers% void %funcname%(%type% %varname%) {\n" .
+            \ "\tthis.%varname% = %varname%;\n" .
+            \ "}"
+
+

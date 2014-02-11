@@ -1,0 +1,31 @@
+"Bundle 'vim-scripts/CRefVim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-scripts/nxc.vim'
+UnBundle 'bling/vim-bufferline'
+
+let g:ctrlp_cmd='CtrlP .'
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'passive_filetypes': ['nxc', 'java'] }
+let g:syntastic_java_javac_config_file_enabled=1
+let g:EclimCompletionMethod='omnifunc'
+
+let g:ycm_add_preview_to_completeopt=0
+let g:signify_disable_by_default=1
+
+set sessionoptions=blank,buffers,folds,resize,unix,winpos,winsize 
+
+" Only use tags for lookups if some context aware implementation is not
+" available
+autocmd FileType java noremap <buffer> <c-]> :JavaSearchContext <cr>
+autocmd FileType c noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType cpp noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType cs noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType objc noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType objcpp noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType python noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+
+" Ctrl + I to organize java imports like eclipse
+autocmd FileType java noremap <buffer> <c-I> :JavaImportOrganize <cr>
+
+
