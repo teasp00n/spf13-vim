@@ -615,15 +615,11 @@
             endif
 
             " For snippet_complete marker.
-<<<<<<< HEAD
-            if has('conceal')
-                set conceallevel=2 concealcursor=i
-=======
+
             if !exists("g:spf13_no_conceal")
                 if has('conceal')
                     set conceallevel=2 concealcursor=i
                 endif
->>>>>>> ebd410b8a9e220e2fe4a90f2efae5b00afdd6fb5
             endif
 
             " Disable the neosnippet preview candidate window
