@@ -25,7 +25,12 @@ autocmd FileType objc noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDec
 autocmd FileType objcpp noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
 autocmd FileType python noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
 
-" Ctrl + I to organize java imports like eclipse
-autocmd FileType java noremap <buffer> <c-I> :JavaImportOrganize <cr>
-
+" Eclim mappings for java buffers
+autocmd FileType java noremap <buffer> <leader>pr :ProjectRefresh <cr>
+autocmd FileType java noremap <buffer> <leader>pi :ProjectInfo <cr>
+autocmd FileType java noremap <buffer> <leader>ji :JavaImpl <cr>
+autocmd FileType java noremap <buffer> <leader>jg :JavaGetSet <cr>
+autocmd FileType java noremap <buffer> <leader>ji :JavaImportOrganize <cr>
+autocmd FileType java noremap <buffer> <leader>jt :JavaConstructor <cr>
+autocmd FileType java noremap <buffer> <leader>jc :JavaCorrect <cr>
 
