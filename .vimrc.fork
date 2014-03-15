@@ -1,6 +1,6 @@
 set shell=/usr/bin/sh
 
-set guifont=Andale\ Mono\ Bold\ 12,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
+set guifont=Andale\ Mono\ Bold\ 11,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
 set noantialias " should stop all the weird visual artifacts etc
 
 set nocursorline
@@ -12,7 +12,7 @@ nmap <F1> <nop>
 imap <F1> <nop>
 nmap <leader>rc :source $MYVIMRC <cr>
 
-set completeopt-=preview
+"set completeopt-=preview
 
 "let g:override_spf13_bundles = 1
 let g:syntastic_python_checkers=['flake8']
