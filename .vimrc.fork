@@ -23,6 +23,7 @@ let g:syntastic_always_populate_loc_list=1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_path_to_python_interpreter = '/usr/bin/python2'
 
+autocmd BufNewFile,BufRead *.gradle set filetype=groovy
 autocmd BufNewFile,BufRead *.nxc set filetype=nxc
 autocmd FileType nxc setlocal syntax=nxc
 "let g:syntastic_disabled_filetypes=[ 'c','cpp','m', 'mm' ]
