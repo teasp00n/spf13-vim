@@ -4,6 +4,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/nxc.vim'
 Bundle 'tommcdo/vim-exchange'
 UnBundle 'bling/vim-bufferline'
+UnBundle 'justinmk/vim-sneak'
+UnBundle 'nathanaelkane/vim-indent-guides'
 
 let g:ctrlp_cmd='CtrlP .'
 let g:syntastic_mode_map = { 'mode': 'active',
