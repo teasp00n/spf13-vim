@@ -21,7 +21,6 @@ let g:indent_guides_enable_on_vim_startup = 0
 let g:syntastic_always_populate_loc_list=1
 "let g:ycm_server_use_vim_stdout = 1
 "let g:ycm_server_log_level = 'debug'
-let g:ycm_path_to_python_interpreter = '/usr/bin/python2'
 
 let g:tagbar_sort = 0
 
