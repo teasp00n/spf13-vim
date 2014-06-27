@@ -41,6 +41,10 @@ nnoremap N Nzzzv
 nnoremap g; g;zz
 nnoremap g, g,zz
 
+nnoremap <leader>ad :Ant debug<cr>
+nnoremap <leader>ai :Ant installd<cr>
+nnoremap <leader>ac :Ant clean<cr>
+
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['c', 'cpp', 'm', 'mm'] }
