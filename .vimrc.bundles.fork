@@ -1,6 +1,5 @@
 "Bundle 'vim-scripts/CRefVim'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/nxc.vim'
 Bundle 'tommcdo/vim-exchange'
 "Bundle 'paradigm/TextObjectify'
