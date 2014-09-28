@@ -56,6 +56,17 @@ If you want to install [msysgit], [Curl] and [spf13-vim] individually, follow th
 
 ### Installing dependencies
 
+#### Install [Vim]
+
+After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of spf13.
+
+Open Vim and write the following command, it will show the installed directory:
+
+    :echo $VIMRUNTIME
+    C:\Program Files (X86)\Vim\vim74
+
+Then you need to add it to your environment variable path. After that try execute `vim` within command prompt (press Win-R, type `cmd`, press Enter) and you’ll see the default vim page.
+
 #### Install [msysgit]
 
 After installation try running `git --version` within _command prompt_ (press Win-R,  type `cmd`, press Enter) to make sure all good:
@@ -185,7 +196,7 @@ needs to be set in your `.vimrc.bundles.fork` file.
 You can specify the default bundles for your fork using `.vimrc.before.fork` file. Here is how to create an example `.vimrc.before.fork` file 
 in a fork repo for the default bundles.
 ```bash
-    echo let g:spf13_bundle_groups=['general', 'programming', 'misc', 'youcompleteme'] >> .vimrc.before.fork
+    echo let g:spf13_bundle_groups=[\'general\', \'programming\', \'misc\', \'youcompleteme\'] >> .vimrc.before.fork
 ```
 Once you have this file in your repo, only the bundles you specified will be installed during the first installation of your fork.
 
