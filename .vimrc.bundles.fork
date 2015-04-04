@@ -6,6 +6,7 @@ Bundle 'tommcdo/vim-exchange'
 UnBundle 'bling/vim-bufferline'
 UnBundle 'justinmk/vim-sneak'
 UnBundle 'nathanaelkane/vim-indent-guides'
+Bundle 'OrangeT/vim-csharp'
 
 let g:ctrlp_cmd='CtrlP .'
 let g:syntastic_mode_map = { 'mode': 'active',
