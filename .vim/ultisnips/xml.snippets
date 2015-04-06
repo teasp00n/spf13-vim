@@ -1,0 +1,12 @@
+snippet vi "android view" b
+<$1View
+	android:id="@+id/$2"
+	android:layout_height="${3:wrap_content}"
+	android:layout_width="${4:wrap_content}" $5/>
+	$0
+endsnippet
+
+snippet re "android xml resource" b
+<${1} name="$2">$3</$1>
+$0
+endsnippet
