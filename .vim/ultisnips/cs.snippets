@@ -1,0 +1,42 @@
+snippet onc "android onCreate" b
+protected override void OnCreate(Bundle savedInstanceState) {
+	base.OnCreate(savedInstanceState);
+	$0
+}
+endsnippet
+
+snippet ons "android onStart" b
+protected override void OnStart() {
+	base.OnStart();
+	$0
+}
+endsnippet
+
+snippet onr "android onResume" b
+protected override void OnResume() {
+	base.OnResume();
+	$0
+}
+endsnippet
+
+snippet onp "android onPause" b
+protected override void OnPause() {
+	$0
+	base.OnPause();
+}
+endsnippet
+
+snippet ont "android onStop" b
+protected override void OnStop() {
+	$0
+	base.OnStop();
+}
+endsnippet
+
+snippet ond "android onDestroy" b
+protected override void OnDestroy() {
+	$0
+	base.OnDestroy();
+}
+endsnippet
+
