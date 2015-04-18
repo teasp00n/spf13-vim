@@ -1,12 +1,15 @@
+"My own bundles
 "Bundle 'vim-scripts/CRefVim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/nxc.vim'
 Bundle 'tommcdo/vim-exchange'
-"Bundle 'paradigm/TextObjectify'
+Bundle 'OrangeT/vim-csharp'
+Bundle 'kballard/vim-swift'
+
+"Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
 UnBundle 'justinmk/vim-sneak'
 UnBundle 'nathanaelkane/vim-indent-guides'
-Bundle 'OrangeT/vim-csharp'
 
 let g:ctrlp_cmd='CtrlP .'
 let g:syntastic_mode_map = { 'mode': 'active',
@@ -32,7 +35,7 @@ autocmd FileType python noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseD
 " Eclim mappings for java buffers
 autocmd FileType java noremap <buffer> <leader>pr :ProjectRefresh <cr>
 autocmd FileType java noremap <buffer> <leader>pi :ProjectInfo <cr>
-autocmd FileType java noremap <buffer> <leader>ji :JavaImpl <cr>
+autocmd FileType java noremap <buffer> <leader>im :JavaImpl <cr>
 autocmd FileType java noremap <buffer> <leader>jg :JavaGetSet <cr>
 autocmd FileType java noremap <buffer> <leader>ji :JavaImportOrganize <cr>
 autocmd FileType java noremap <buffer> <leader>jt :JavaConstructor <cr>
