@@ -6,6 +6,23 @@ public void onCreate(Bundle savedInstanceState) {
 }
 endsnippet
 
+snippet oncv "android onCreateView" b
+@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+		Bundle savedInstanceState) {
+	View rootView = inflater.inflate(R.layout.$1, container, ${2:false});
+	$0
+}
+endsnippet
+
+snippet onac "android onActivityCreated" b
+@Override
+public void onActivityCreated(Bundle savedInstanceState) {
+	super.onActivityCreated(savedInstanceState);
+	$0
+}
+endsnippet
+
 snippet ons "android onStart" b
 @Override
 public void onStart() {
@@ -44,4 +61,8 @@ public void onDestroy() {
 	$0
 	super.onDestroy();
 }
+endsnippet
+
+snippet log "adb logging" b
+Log.${1:d}(TAG, "$2");$0
 endsnippet
