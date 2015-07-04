@@ -1,4 +1,4 @@
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
 
 set nocursorline

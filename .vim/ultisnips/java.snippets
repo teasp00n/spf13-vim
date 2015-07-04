@@ -65,5 +65,23 @@ public void onDestroy() {
 endsnippet
 
 snippet log "adb logging" b
-Log.${1:d}(TAG, "$2");$0
+Log.${1:d}(${2:TAG}, "$3");$0
+endsnippet
+
+snippet obs "observer pattern" b
+public List<$1Listener> ${1/\w+\s*/\l$0/g}Listeners = new ArrayList<$1Listener>();
+public interface $1Listener {
+	public void on$1($2);
+}
+public void add$1Listener($1Listener l) {
+	$1Listeners.add(l);
+}
+public void remove$1Listener($1Listener l) {
+	$1Listeners.remove(l);
+}
+public void notify$1Listeners() {
+	for ($1Listener l : $1Listeners) {
+		l.on$1($2);
+	}
+}$0
 endsnippet
