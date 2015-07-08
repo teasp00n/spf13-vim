@@ -80,7 +80,7 @@ public void remove$1Listener($1Listener l) {
 	${1/\w+\s*/\l$0/g}Listeners.remove(l);
 }
 public void notify$1Listeners() {
-	for ($1Listener l : $1Listeners) {
+	for ($1Listener l : ${1/\w+\s*/\l$0/g}Listeners) {
 		l.on$1();
 	}
 }$0
