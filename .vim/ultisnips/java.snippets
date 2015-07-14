@@ -71,7 +71,7 @@ endsnippet
 snippet obs "observer pattern" b
 public List<$1Listener> ${1/\w+\s*/\l$0/g}Listeners = new ArrayList<$1Listener>();
 public interface $1Listener {
-	public void on$1();
+	public void on$1($2);
 }
 public void add$1Listener($1Listener l) {
 	${1/\w+\s*/\l$0/g}Listeners.add(l);
@@ -79,9 +79,9 @@ public void add$1Listener($1Listener l) {
 public void remove$1Listener($1Listener l) {
 	${1/\w+\s*/\l$0/g}Listeners.remove(l);
 }
-public void notify$1Listeners() {
+public void notify$1Listeners($2) {
 	for ($1Listener l : ${1/\w+\s*/\l$0/g}Listeners) {
-		l.on$1();
+		l.on$1(${2/\w+\s*//});
 	}
 }$0
 endsnippet
