@@ -6,6 +6,7 @@ Bundle 'tommcdo/vim-exchange'
 Bundle 'OrangeT/vim-csharp'
 Bundle 'kballard/vim-swift'
 Bundle 'JazzCore/ctrlp-cmatcher'
+Bundle 'tpope/vim-bundler'
 
 "Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
