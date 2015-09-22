@@ -641,7 +641,7 @@
             endif
             let g:ctrlp_user_command = {
                 \ 'types': {
-                    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+                    \ 1: ['.git', "cd %s && git ls-files . --cached --exclude-standard --others; git submodule foreach 'for file in $(git ls-files . --cached --exclude-standard --others); do echo "$path/$file"; done'"],
                     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
                 \ },
                 \ 'fallback': s:ctrlp_fallback
