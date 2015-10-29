@@ -5,8 +5,8 @@ Bundle 'vim-scripts/nxc.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'OrangeT/vim-csharp'
 Bundle 'kballard/vim-swift'
-Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'tpope/vim-bundler'
+Bundle 'rdnetto/YCM-Generator'
 
 "Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
