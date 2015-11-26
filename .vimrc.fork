@@ -6,6 +6,7 @@ set nolist
 set ttyscroll=0
 set guioptions-=L
 set guioptions-=r
+set wrap
 map <F1> <nop>
 nmap <F1> <nop>
 imap <F1> <nop>

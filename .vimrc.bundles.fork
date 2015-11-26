@@ -7,11 +7,13 @@ Bundle 'OrangeT/vim-csharp'
 Bundle 'kballard/vim-swift'
 Bundle 'tpope/vim-bundler'
 Bundle 'rdnetto/YCM-Generator'
+Bundle 'vim-scripts/dbext.vim'
 
 "Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
 UnBundle 'justinmk/vim-sneak'
 UnBundle 'nathanaelkane/vim-indent-guides'
+UnBundle 'luochen1990/rainbow'
 
 let g:ctrlp_cmd='CtrlP .'
 let g:syntastic_aggregate_errors=1
