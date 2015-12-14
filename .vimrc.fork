@@ -7,6 +7,7 @@ set ttyscroll=0
 set guioptions-=L
 set guioptions-=r
 set wrap
+set scrolloff=999 "keep cursor line centered
 map <F1> <nop>
 nmap <F1> <nop>
 imap <F1> <nop>
