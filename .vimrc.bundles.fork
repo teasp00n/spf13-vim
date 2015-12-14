@@ -7,7 +7,7 @@ Bundle 'OrangeT/vim-csharp'
 Bundle 'kballard/vim-swift'
 Bundle 'tpope/vim-bundler'
 Bundle 'rdnetto/YCM-Generator'
-Bundle 'vim-scripts/dbext.vim'
+"Bundle 'vim-scripts/dbext.vim'
 
 "Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
