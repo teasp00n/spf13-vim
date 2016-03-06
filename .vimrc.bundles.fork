@@ -8,7 +8,8 @@ Bundle 'kballard/vim-swift'
 Bundle 'tpope/vim-bundler'
 Bundle 'rdnetto/YCM-Generator'
 Bundle 'udalov/kotlin-vim'
-"Bundle 'vim-scripts/dbext.vim'
+"Bundle 'hsanson/vim-android'
+"Bundle 'idanarye/vim-vebugger'
 
 "Remove stuff I don't want
 UnBundle 'bling/vim-bufferline'
@@ -23,6 +24,7 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['nxc', 'java'] }
 let g:syntastic_java_javac_config_file_enabled=1
+
 let g:EclimCompletionMethod='omnifunc'
 
 let g:ycm_add_preview_to_completeopt=0
@@ -32,13 +34,13 @@ set sessionoptions=blank,buffers,folds,resize,unix,winpos,winsize
 
 " Only use tags for lookups if some context aware implementation is not
 " available
-autocmd FileType java noremap <buffer> <c-]> :JavaSearchContext <cr>
-autocmd FileType c noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
-autocmd FileType cpp noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
-autocmd FileType cs noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
-autocmd FileType objc noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
-autocmd FileType objcpp noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
-autocmd FileType python noremap <buffer> <c-]> :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType java noremap <buffer> gd :JavaSearchContext <cr>
+autocmd FileType c noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType cpp noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType cs noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType objc noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType objcpp noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
+autocmd FileType python noremap <buffer> gd :YcmCompleter GoToDefinitionElseDeclaration <cr>
 
 " Eclim mappings for java buffers
 autocmd FileType java noremap <buffer> <leader>pr :ProjectRefresh <cr>
@@ -49,3 +51,9 @@ autocmd FileType java noremap <buffer> <leader>ji :JavaImportOrganize <cr>
 autocmd FileType java noremap <buffer> <leader>jt :JavaConstructor <cr>
 autocmd FileType java noremap <buffer> <leader>jc :JavaCorrect <cr>
 
+autocmd FileType java noremap <leader>bb :JavaDebugBreakpointsList<cr>
+autocmd FileType java noremap <leader>b<space> :JavaDebugBreakpointToggle<cr>
+
+autocmd FileType java noremap <leader>so :JavaDebugStep over<cr>
+autocmd FileType java noremap <leader>si :JavaDebugStep into<cr>
+autocmd FileType java noremap <leader>sr :JavaDebugStep return<cr>
