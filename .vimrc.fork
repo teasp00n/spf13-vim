@@ -1,5 +1,4 @@
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline,\ Regular:h12,Menlo\ Regular:h14,Consolas\ Regular:h12,Courier\ New\ Regular:h14
 
 set nocursorline
 set nolist
@@ -15,7 +14,6 @@ nmap <leader>rc :source $MYVIMRC <cr>
 
 "set completeopt-=preview
 
-
 set noerrorbells 
 set novisualbell
 set t_vb=
@@ -24,6 +22,7 @@ autocmd! GUIEnter * set vb t_vb=
 let g:syntastic_python_checkers=['flake8']
 let g:indent_guides_enable_on_vim_startup = 0
 let g:syntastic_always_populate_loc_list=1
+
 "let g:ycm_server_use_vim_stdout = 1
 "let g:ycm_server_log_level = 'debug'
 
@@ -32,19 +31,8 @@ let g:tagbar_sort = 0
 autocmd BufNewFile,BufRead *.gradle set filetype=groovy
 autocmd BufNewFile,BufRead *.nxc set filetype=nxc
 autocmd FileType nxc setlocal syntax=nxc
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 "let g:syntastic_disabled_filetypes=[ 'c','cpp','m', 'mm' ]
-
-" Keep search matches in the middle of the window.
-" zz centers the screen on the cursor, zv unfolds any fold if the cursor
-" suddenly appears inside a fold.
-nnoremap * *zzzv
-nnoremap # #zzzv
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
-" Also center the screen when jumping through the changelist
-nnoremap g; g;zz
-nnoremap g, g,zz
 
 nnoremap <leader>bb :JavaDebugBreakpointsList<cr>
 nnoremap <leader>b<space> :JavaDebugBreakpointToggle<cr>
